@@ -104,40 +104,32 @@ const LogoSVG = ({
         />
       ))}
 
-      {/* NAME — ПРО */}
+      {/* NAME — ПроРесницы (handwritten) */}
       <text
-        x="200" y="290"
+        x="200" y="295"
         textAnchor="middle"
-        fontFamily="'Cormorant Garamond','Georgia',serif"
+        fontFamily="'Caveat','cursive'"
         fontWeight="600"
-        fontSize="44"
+        fontSize="54"
         fill={fg}
-        letterSpacing="10"
       >
-        ПРО
+        Про
+        <tspan fill={accent}>Ресницы</tspan>
       </text>
 
-      {/* Dividers */}
-      <line x1="130" y1="300" x2="170" y2="300" stroke={fg} strokeWidth="0.6" opacity="0.2" />
-      <line x1="230" y1="300" x2="270" y2="300" stroke={fg} strokeWidth="0.6" opacity="0.2" />
-
-      {/* NAME — РЕСНИЦЫ */}
-      <text
-        x="200" y="327"
-        textAnchor="middle"
-        fontFamily="'Cormorant Garamond','Georgia',serif"
-        fontWeight="300"
-        fontStyle="italic"
-        fontSize="27"
-        fill={accent}
-        letterSpacing="8"
-      >
-        РЕСНИЦЫ
-      </text>
+      {/* Decorative swirl under name */}
+      <path
+        d="M 135 305 Q 200 318 265 305"
+        fill="none"
+        stroke={accent}
+        strokeWidth="1"
+        strokeLinecap="round"
+        opacity="0.5"
+      />
 
       {/* TAGLINE */}
       <text
-        x="200" y="357"
+        x="200" y="340"
         textAnchor="middle"
         fontFamily="'Montserrat',sans-serif"
         fontWeight="300"
@@ -166,15 +158,15 @@ export default function Index() {
 
       {/* Header */}
       <header style={{ background: WHITE, borderBottom: "1px solid #ebebeb", padding: "20px 48px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <span style={{ fontSize: "9px", letterSpacing: "4px", opacity: 0.35 }}>ЛОГОТИП · ВЕРСИЯ 2</span>
+        <span style={{ fontSize: "9px", letterSpacing: "4px", opacity: 0.35 }}>ЛОГОТИП · ВЕРСИЯ 3</span>
         <span style={{ fontSize: "9px", letterSpacing: "3px", color: active === "violet" ? ACCENT : active === "pink" ? ACCENT_PINK : BLACK, opacity: 0.7 }}>ПроРесницы</span>
       </header>
 
       {/* Hero */}
       <section style={{ background: WHITE, padding: "64px 48px 48px", textAlign: "center", borderBottom: "1px solid #ebebeb" }}>
         <p style={{ fontSize: "9px", letterSpacing: "5px", opacity: 0.3, marginBottom: "14px" }}>СТУДИЯ КРАСОТЫ</p>
-        <h1 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: "clamp(28px,5vw,52px)", fontWeight: 300, letterSpacing: "6px", color: BLACK, margin: "0 0 10px" }}>
-          ПроРесницы
+        <h1 style={{ fontFamily: "'Caveat',cursive", fontSize: "clamp(36px,6vw,64px)", fontWeight: 600, color: BLACK, margin: "0 0 10px" }}>
+          Про<span style={{ color: active === "violet" ? ACCENT : active === "pink" ? ACCENT_PINK : BLACK }}>Ресницы</span>
         </h1>
         <p style={{ fontSize: "10px", letterSpacing: "3px", color: active === "violet" ? ACCENT : active === "pink" ? ACCENT_PINK : BLACK, opacity: 0.65 }}>
           Ламинирование · Коррекция бровей
@@ -275,9 +267,7 @@ export default function Index() {
         ПРОРЕСНИЦЫ · СТУДИЯ ЛАМИНИРОВАНИЯ И КОРРЕКЦИИ БРОВЕЙ
       </footer>
 
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@200;300;400&display=swap');
-      `}</style>
+      <style>{``}</style>
     </div>
   );
 }
